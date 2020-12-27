@@ -5,8 +5,6 @@
     <li>Try vue-router</li>
     <li>Make sure it will be continued</li>
   </ul>
-  <h3>Vite means fast in french, if you don't know, now you know</h3>
-  <p>Edit <code>components/HelloWorld.vue</code> to test hot module replacement.</p>
 </template>
 
 <script>

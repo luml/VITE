@@ -3,11 +3,14 @@ import { createWebHashHistory, createRouter } from 'vue-router'
 import App from './App.vue'
 import FirstDay from './components/FirstDay.vue'
 import ChildPage from './components/ChildPage.vue'
+import User from './components/User.vue'
 import './index.css'
+
 
 const routes = [
     { path: '/', component: FirstDay },
-    { path: '/child', component: ChildPage }
+    { path: '/child', component: ChildPage },
+    { path: '/users/:id', component: User }
 ]
 const history = createWebHashHistory()
 const router = createRouter({
