@@ -1,6 +1,7 @@
 import { createApp } from 'vue'
 import { createWebHashHistory, createRouter } from 'vue-router'
 import App from './App.vue'
+import HelloWorld from './components/HelloWorld.vue'
 import FirstDay from './components/FirstDay.vue'
 import ChildPage from './components/ChildPage.vue'
 import User from './components/User.vue'
@@ -12,7 +13,16 @@ const routes = [
     { path: '/', component: FirstDay },
     { path: '/child', component: ChildPage },
     { path: '/users/:id', name: 'users', component: User },
-    { path: '/:pathMatch(.*)*', name: 'NotFound', component: NotFound }
+    { path: '/:pathMatch(.*)*', name: 'NotFound', component: NotFound },
+    {
+        path: '/',
+        components: {
+            default: FirstDay,
+            ChildPage,
+            HelloWorld,
+            User,
+        }
+    }
 ]
 const history = createWebHashHistory()
 const router = createRouter({
