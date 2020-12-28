@@ -2,7 +2,8 @@
   <h1>{{ msg }}</h1>
   <button @click="count++">count is: {{ count }}</button>
   <ul>
-    <li>Try vue-router</li>
+    <li>Try vue-router, tbc</li>
+    <li>layout</li>
     <li>Make sure it will be continued</li>
   </ul>
 </template>

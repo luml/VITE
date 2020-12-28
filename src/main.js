@@ -11,7 +11,7 @@ import './index.css'
 const routes = [
     { path: '/', component: FirstDay },
     { path: '/child', component: ChildPage },
-    { path: '/users/:id', component: User },
+    { path: '/users/:id', name: 'users', component: User },
     { path: '/:pathMatch(.*)*', name: 'NotFound', component: NotFound }
 ]
 const history = createWebHashHistory()
