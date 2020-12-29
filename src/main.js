@@ -1,5 +1,5 @@
 import { createApp } from 'vue'
-import { createWebHashHistory, createRouter } from 'vue-router'
+import { createWebHashHistory, createRouter, createWebHistory } from 'vue-router'
 import App from './App.vue'
 // import HelloWorld from './components/HelloWorld.vue'
 import FirstDay from './components/FirstDay.vue'
@@ -25,7 +25,8 @@ const routes = [
     { path: '/redir', redirect: '/' },
 
 ]
-const history = createWebHashHistory()
+// const history = createWebHashHistory()
+const history = createWebHistory()
 const router = createRouter({
     history,
     routes,
