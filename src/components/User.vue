@@ -1,5 +1,5 @@
 <template>
-  <div>🇨🇳✌🏼 {{ userName }}</div>
+  <div>✌🏼 {{ userName }}</div>
   <router-link to="/">Home</router-link>
 </template>
 

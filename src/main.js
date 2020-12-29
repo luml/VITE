@@ -1,7 +1,7 @@
 import { createApp } from 'vue'
 import { createWebHashHistory, createRouter } from 'vue-router'
 import App from './App.vue'
-import HelloWorld from './components/HelloWorld.vue'
+// import HelloWorld from './components/HelloWorld.vue'
 import FirstDay from './components/FirstDay.vue'
 import ChildPage from './components/ChildPage.vue'
 import User from './components/User.vue'
@@ -10,7 +10,7 @@ import './index.css'
 
 
 const routes = [
-    { path: '/', component: FirstDay },
+    { path: '/', component: FirstDay, alias: '/home' },
     { path: '/child', component: ChildPage },
     { path: '/users/:id', name: 'users', component: User },
     { path: '/:pathMatch(.*)*', name: 'NotFound', component: NotFound },
@@ -19,10 +19,11 @@ const routes = [
         components: {
             default: FirstDay,
             ChildPage,
-            HelloWorld,
             User,
         }
-    }
+    },
+    { path: '/redir', redirect: '/' },
+
 ]
 const history = createWebHashHistory()
 const router = createRouter({
