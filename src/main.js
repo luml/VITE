@@ -12,7 +12,7 @@ import './index.css'
 const routes = [
     { path: '/', component: FirstDay, alias: '/home' },
     { path: '/child', component: ChildPage },
-    { path: '/users/:id', name: 'users', component: User },
+    { path: '/users/:id', name: 'users', component: User, props: true },
     { path: '/:pathMatch(.*)*', name: 'NotFound', component: NotFound },
     {
         path: '/',

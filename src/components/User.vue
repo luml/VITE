@@ -1,10 +1,15 @@
 <template>
-  <div>✌🏼 {{ userName }}</div>
+  <div>{{ userName }} ✌🏼 {{ id }}</div>
   <router-link to="/">Home</router-link>
 </template>
 
 <script>
 export default {
+  props: {
+    id: {
+      type: String,
+    },
+  },
   data() {
     return {
       userName: "",
