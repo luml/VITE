@@ -1,5 +1,8 @@
 <template>
   <div>{{ userName }} ✌🏼 {{ id }}</div>
+  <router-link :to="`/users/${id}/profile`">check profile</router-link>
+  <router-link :to="`/users/${id}/posts`">check posts</router-link>
+  <router-view></router-view>
   <router-link to="/">Home</router-link>
 </template>
 
