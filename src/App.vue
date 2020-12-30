@@ -1,11 +1,11 @@
 <template>
-  <!-- <HelloWorld msg="Vite means fast in french, if you don't know, now you know" /> -->
-  <span>🇨🇳</span>
-  <router-link to="/child">CHECK CHILD</router-link>
-  <br />
-  <router-link :to="{ name: 'users', params: { id: 'James' } }">CHECK USER</router-link>
-  <br />
-  <router-link to="/redir">CHECK REDIRECT</router-link>
+  <section class="left">
+    <router-link to="/child">CHECK CHILD</router-link>
+    <br />
+    <router-link :to="{ name: 'users', params: { id: 'James' } }">CHECK USER</router-link>
+    <br />
+    <router-link to="/redir">CHECK REDIRECT</router-link>
+  </section>
   <router-view></router-view>
 </template>
 
@@ -23,3 +23,18 @@ export default {
   },
 };
 </script>
+
+<style lang="css" scoped>
+.left {
+  position: absolute;
+  left: 10%;
+  margin-right: 100px;
+}
+.left span,
+a {
+  margin: 10px;
+}
+.left + div {
+  margin-left: 20%;
+}
+</style>

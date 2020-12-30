@@ -22,4 +22,8 @@ export default {
 };
 </script>
 
-<style lang="" scoped></style>
+<style lang="" scoped>
+a {
+  margin: 10px;
+}
+</style>
