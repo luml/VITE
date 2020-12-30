@@ -1,15 +1,16 @@
 import { createApp } from 'vue'
-import { createWebHashHistory, createRouter, createWebHistory } from 'vue-router'
+import { createRouter, createWebHistory } from 'vue-router'
 import App from './App.vue'
-// import HelloWorld from './components/HelloWorld.vue'
 import FirstDay from './components/FirstDay.vue'
 import ChildPage from './components/ChildPage.vue'
 import User from './components/User.vue'
 import NotFound from './components/NotFound.vue'
 import UserProfile from './components/UserProfile.vue'
 import UserPosts from './components/UserPosts.vue'
+import First from './views/First.vue'
+import Second from './views/Second.vue'
+import Third from './views/Third.vue'
 import './index.css'
-
 
 const routes = [
     { path: '/', component: FirstDay, alias: '/home' },
@@ -30,23 +31,31 @@ const routes = [
             }
         ]
     },
-    { path: '/:pathMatch(.*)*', name: 'NotFound', component: NotFound },
     {
-        path: '/',
+        path: '/users/:id/posts/inc',
         components: {
-            default: FirstDay,
-            ChildPage,
-            User,
+            default: First,
+            a: Second,
+            b: Third
         }
     },
-    { path: '/redir', redirect: '/' },
+    {
+        path: '/users/:id/posts/dec',
+        components: {
+            default: Third,
+            a: Second,
+            b: First
+        }
+    },
+    { path: '/:pathMatch(.*)*', name: 'NotFound', component: NotFound },
+    { path: '/redir', redirect: '/' }
 
 ]
 // const history = createWebHashHistory()
 const history = createWebHistory()
 const router = createRouter({
     history,
-    routes,
+    routes
 })
 
 const app = createApp(App)

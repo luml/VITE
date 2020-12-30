@@ -6,9 +6,7 @@
   <router-link :to="{ name: 'users', params: { id: 'James' } }">CHECK USER</router-link>
   <br />
   <router-link to="/redir">CHECK REDIRECT</router-link>
-  <router-view class="view left-sidebar" name="FirstDay"></router-view>
-  <router-view class="view main-content"></router-view>
-  <router-view class="view right-sidebar" name="ChildPage"></router-view>
+  <router-view></router-view>
 </template>
 
 <script>
