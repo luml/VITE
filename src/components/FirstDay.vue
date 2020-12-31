@@ -1,8 +1,7 @@
 <template>
   <div>
     <p>
-      Hey, this is your first day with Vite, since today, there will always the first day
-      at here.
+      Hey, this is your first day with Vite, hope you have fun at the rest of the time.
     </p>
   </div>
 </template>

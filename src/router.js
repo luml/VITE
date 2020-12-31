@@ -58,14 +58,11 @@ export const router = createRouter({
     ]
 })
 
-router.beforeEach((to, from) => { // next is third parameter
-    // TODO for cancel the navigation
+router.beforeEach((to, from, next) => { // next is third parameter
     console.log('---router method beforeEach---', to, from)
     if (to.name && to.name !== 'Login') {
-        // next({ name: 'Login' })
-        return true
+        next()
     } else {
-        // next({ name: 'Home' })
-        return false
+        next()
     }
 })
