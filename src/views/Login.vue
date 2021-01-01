@@ -12,4 +12,12 @@ export default {
 };
 </script>
 
-<style></style>
+<style scoped>
+button {
+  width: 80px;
+  height: 32px;
+  border: none;
+  border-radius: 2px;
+  font-size: 19px;
+}
+</style>
